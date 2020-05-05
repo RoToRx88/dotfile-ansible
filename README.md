@@ -1,4 +1,4 @@
-# Dotfile managed with ansible
+# Dotfile as ansible roles
 
 ## Description
 
