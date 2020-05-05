@@ -24,6 +24,7 @@
       - tmate
       - jq
       - feh
+      - clipit
 
 - name: Install snap packages
   become: yes
