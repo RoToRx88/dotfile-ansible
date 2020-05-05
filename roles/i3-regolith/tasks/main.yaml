@@ -5,14 +5,21 @@
   apt_repository:
     repo: ppa:regolith-linux/release
 
+- name: Update apt cache
+  become: yes
+  apt: update_cache=yes
+
 - name: Install regolith and aditionnal packages
+  become: yes
   apt:
-    update_cache: yes
     pkg:
       - regolith-desktop
       - i3xrocks-net-traffic
       - i3xrocks-cpu-usage
       - i3xrocks-time
+
+- name: Create i3 config folder
+  file: path=/home/{{ username }}/.config/regolith/i3 state=directory
 
 - name: Upload custom i3 config
   template:
