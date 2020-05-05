@@ -2,6 +2,12 @@
 - name: Create Vim folder
   file: path=/home/{{ username }}/.vim state=directory owner={{ username }} group={{ username }}
 
+- name: Create undo vim folder
+  file: path=/home/{{ username }}/.vim/undo state=directory owner={{ username }} group={{ username }}
+
+- name: Create swap vim folder
+  file: path=/home/{{ username }}/.vim/swap state=directory owner={{ username }} group={{ username }}
+
 - name: Create autoload vim folder
   file: path=/home/{{ username }}/.vim/autoload state=directory owner={{ username }} group={{ username }}
 
