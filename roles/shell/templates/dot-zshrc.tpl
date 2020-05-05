@@ -2,7 +2,7 @@
 source /home/{{ username }}/.zsh/antigen.zsh
 
 # Load antigen configuration
-antigen init /home/{{ username }}/config/.antigenrc
+antigen init /home/{{ username }}/.config/.antigenrc
 
 alias l="ls -l"
 alias la="ls -la"
