@@ -2,8 +2,12 @@
 - name: Create Zsh folder
   file: path=/home/{{ username }}/.zsh state=directory
 
+# Should download from git.io/antigen but the redirection seems to break TODO: Check redirection support for get_url
 - name: Get antigen from git
-  get_url: url=git.io/antigen dest=/home/{{ username }}/.zsh/antigen.zsh
+  get_url: url=https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh dest=/home/{{ username }}/.zsh/antigen.zsh
 
 - name: Upload antigen configuration
-  copy: src=dot-antigenrc dest=/home/{{ username }}/.antigenrc
+  copy: src=dot-antigenrc dest=/home/{{ username }}/.config/.antigenrc
+
+-name: Upload zsh configuration
+  template: src=dot-zshrc.tpl dest=/home/{{ username }}/.zshrc
