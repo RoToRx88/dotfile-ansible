@@ -4,3 +4,13 @@
   copy:
     src: dot-Xresources
     dest: /home/{{ username }}/.Xresources
+
+- name: Ensure local font folder is present
+  file:
+    path=/home/{{ username }}/.local/share/fonts/
+    state=directory
+
+- name: Upload Inconsolata font
+  copy:
+    src: fonts/
+    dest: /home/{{ username }}/.local/share/fonts/
