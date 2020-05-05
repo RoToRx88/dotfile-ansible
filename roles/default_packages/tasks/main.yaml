@@ -25,6 +25,7 @@
       - jq
       - feh
       - clipit
+      - fzf
 
 - name: Install snap packages
   become: yes
