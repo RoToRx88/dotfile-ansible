@@ -1,0 +1,6 @@
+---
+
+- name: Upload Xresources file
+  copy:
+    src: dot-Xresources
+    dest: /home/{{ username }}/.Xresources

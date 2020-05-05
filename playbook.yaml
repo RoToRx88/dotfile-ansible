@@ -1,9 +1,6 @@
 ---
 - hosts: 192.168.1.195
   roles:
-    - default_packages
-    - i3-regolith
-    - tmux
-    - vim
+    - resources
   vars:
     - username: ncomte
