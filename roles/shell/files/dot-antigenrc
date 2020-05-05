@@ -5,6 +5,7 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle docker
 antigen bundle man
+antigen bundle fzf
 
 # Load custom bundles for oh-my-zsh
 antigen bundle zsh-users/zsh-completions
