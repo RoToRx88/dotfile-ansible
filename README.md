@@ -4,6 +4,10 @@
 
 Basic dotfile repo with a new approch to it.
 
+## Usage
+
+Simply call the `playbook.yml` with `ansible-playbook` and pass the username of the user you want to setup `-u username`
+Don't forget to update the username variable in the `playbook.yml`
 
 ## Motivations
 
