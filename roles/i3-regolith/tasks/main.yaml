@@ -1,0 +1,21 @@
+---
+
+- name: Add regolith repository to apt list
+  become: yes
+  apt_repository:
+    repo: ppa:regolith-linux/release
+
+- name: Install regolith and aditionnal packages
+  apt:
+    update_cache: yes
+    pkg:
+      - regolith-desktop
+      - i3xrocks-net-traffic
+      - i3xrocks-cpu-usage
+      - i3xrocks-time
+
+- name: Upload custom i3 config
+  template:
+    src: config-i3
+    dest: /home/{{ username }}/.config/regolith/i3/config
+    backup: yes

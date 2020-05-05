@@ -1,0 +1,31 @@
+---
+
+- name: Add google-chrome repository to apt
+  become: yes
+  apt_repository:
+    repo: deb http://dl.google.com/linux/chrome/deb/ stable main
+
+- name: Update apt
+  become: yes
+  apt: update_cache=yes
+
+- name: Install apt packages
+  become: yes
+  apt:
+    pkg:
+      - google-chrome-stable
+      - vim
+      - git
+      - htop
+      - zsh
+      - rxvt-unicode
+      - tmux
+      - tmate
+      - jq
+      - feh
+
+- name: Install snap packages
+  become: yes
+  snap:
+    name: code
+    classic: yes
