@@ -1,6 +1,12 @@
 ---
 
-- name: Add google-chrome repository to apt
+- name: Ensure google linux key is present
+  become: yes
+  apt_key:
+    url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+    state: present
+
+- name: Ensure google-chrome repository is present in apt
   become: yes
   apt_repository:
     repo: deb http://dl.google.com/linux/chrome/deb/ stable main
