@@ -1,0 +1,35 @@
+---
+
+- name: Ensure bspwm and sxhkd are installed
+  become: yes
+  update_cache: yes
+  apt:
+    pkg:
+      - bspwm
+      - sxhkd
+
+- name: Ensure display manager entry is present
+  become: yes
+  get_url:
+    url: https://raw.githubusercontent.com/baskerville/bspwm/master/contrib/freedesktop/bspwm.desktop
+    dest: /usr/share/xsessions/bspwm.desktop
+
+- name: Ensure configuration folders are present
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "/home/{{ username }}/.config/bspwm"
+    - "/home/{{ username }}/sxhkd"
+
+- name: Ensure bspwm configuration is present
+  copy:
+    src: bspwmrc
+    dest: /home/{{ username }}/.config/bspwm/bspwmrc
+    mode: '764'
+
+- name: Ensure sxhkd configuration is present
+  copy:
+    src: sxhkdrc
+    dest: /home/{{ username }}/.config/sxhkd/sxhkdrc
+    mode: '664'
