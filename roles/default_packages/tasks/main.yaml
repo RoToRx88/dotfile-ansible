@@ -34,6 +34,7 @@
       - clipit
       - fzf
       - ack
+      - autojump
 
 - name: Install vs-code from snap
   become: yes
