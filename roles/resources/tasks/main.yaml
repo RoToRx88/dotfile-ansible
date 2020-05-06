@@ -28,3 +28,6 @@
 
 - name: Ensure wallpaper is in use
   shell: gsettings set org.gnome.desktop.background picture-uri /home/{{ username }}/.wallpaper.png
+
+- name: Ensure urxvt is default terminal
+  shell: gsettings set org.gnome.desktop.default-applications.terminal exec urxvt
