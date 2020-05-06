@@ -2,7 +2,12 @@
 - name: Create Zsh folder
   file: path=/home/{{ username }}/.zsh state=directory
 
-  # Should download from git.io/antigen but the redirection seems to break TODO: Check redirection support for get_url
+- name: Get base16-shell from git
+  git:
+    repo: "https://github.com/chriskempson/base16-shell.git"
+    dest: /home/{{ username }}/.config/base16-shell
+
+# Should download from git.io/antigen but the redirection seems to break TODO: Check redirection support for get_url
 - name: Get antigen from git
   get_url: url=https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh dest=/home/{{ username }}/.zsh/antigen.zsh
 
