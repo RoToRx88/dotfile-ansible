@@ -20,3 +20,11 @@
   copy:
     src: fonts/
     dest: /home/{{ username }}/.local/share/fonts/
+
+- name: Ensure wallpaper is present
+  copy:
+    src: wallpaper.png
+    dest: /home/{{ username }}/.wallpaper.png
+
+- name: Ensure wallpaper is in use
+  shell: gsettings set org.gnome.desktop.background picture-uri /home/{{ username }}/.wallpaper.png
