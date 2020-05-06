@@ -35,6 +35,7 @@
       - fzf
       - ack
       - autojump
+      - tig
 
 - name: Install vs-code from snap
   become: yes
