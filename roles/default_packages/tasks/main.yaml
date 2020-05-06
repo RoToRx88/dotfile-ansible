@@ -27,6 +27,7 @@
       - feh
       - clipit
       - fzf
+      - ack
 
 - name: Install vs-code from snap
   become: yes
