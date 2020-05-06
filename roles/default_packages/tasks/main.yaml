@@ -15,6 +15,7 @@
     pkg:
       - google-chrome-stable
       - lastpass-cli
+      - curl
       - vim
       - git
       - htop
@@ -27,8 +28,14 @@
       - clipit
       - fzf
 
-- name: Install snap packages
+- name: Install vs-code from snap
   become: yes
   snap:
     name: code
+    classic: yes
+
+- name: Install golang from snap
+  become: yes
+  snap:
+    name: go
     classic: yes
