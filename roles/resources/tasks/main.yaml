@@ -5,10 +5,18 @@
     src: dot-Xresources
     dest: /home/{{ username }}/.Xresources
 
-- name: Ensure local font folder is present
+- name: Ensure local folders are present
   file:
-    path=/home/{{ username }}/.local/share/fonts/
-    state=directory
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "/home/{{ username }}/.local/share/fonts/"
+    - "/home/{{ username }}/go"
+    - "/home/{{ username }}/go/bin"
+    - "/home/{{ username }}/go/pkg"
+    - "/home/{{ username }}/go/src"
+
+
 
 - name: Upload Inconsolata font
   copy:
