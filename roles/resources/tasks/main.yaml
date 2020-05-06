@@ -5,6 +5,11 @@
     src: dot-Xresources
     dest: /home/{{ username }}/.Xresources
 
+- name: Upload xinitrc file
+  copy:
+    src: dot-xinitrc
+    dest: /home/{{ username }}/.xinitrc
+
 - name: Ensure local folders are present
   file:
     path: "{{ item }}"
