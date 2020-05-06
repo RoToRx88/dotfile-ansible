@@ -16,8 +16,6 @@
     - "/home/{{ username }}/go/pkg"
     - "/home/{{ username }}/go/src"
 
-
-
 - name: Upload Inconsolata font
   copy:
     src: fonts/
