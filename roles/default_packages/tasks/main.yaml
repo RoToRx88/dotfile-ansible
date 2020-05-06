@@ -14,13 +14,13 @@
   apt:
     pkg:
       - google-chrome-stable
-      - lastpass-cli
+      - lastpass-cli  #lpass
       - curl
       - vim
       - git
       - htop
       - zsh
-      - rxvt-unicode
+      - rxvt-unicode  #urxvt
       - tmux
       - tmate
       - jq
