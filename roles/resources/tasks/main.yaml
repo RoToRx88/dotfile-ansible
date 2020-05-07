@@ -21,7 +21,7 @@
     - "/home/{{ username }}/go/pkg"
     - "/home/{{ username }}/go/src"
 
-- name: Upload Inconsolata font
+- name: Upload fonts  # TODO: Download fonts from JetBrains' github to get newest version
   copy:
     src: fonts/
     dest: /home/{{ username }}/.local/share/fonts/
