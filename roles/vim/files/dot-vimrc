@@ -259,6 +259,7 @@ let g:vim_markdown_toc_autofit = 1
 "/ Airline
 "/
 let g:airline_highlighting_cache = 1
+let g:airline_powerline_fonts = 1
 
 "/
 "/ Polygot
