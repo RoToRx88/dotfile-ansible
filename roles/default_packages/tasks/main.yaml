@@ -37,6 +37,7 @@
       - autojump
       - tig
       - make
+      - yarn
 
 - name: Install vs-code from snap
   become: yes
