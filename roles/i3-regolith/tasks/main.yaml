@@ -14,11 +14,15 @@
   apt:
     pkg:
       - regolith-desktop
+      - regolith-look-ubuntu
       - i3xrocks-net-traffic
       - i3xrocks-cpu-usage
       - i3xrocks-time
 
-- name: Create i3 config folder
+- name: Ensure ubuntu look is used
+  shell: regolith-look set ubuntu
+
+  - name: Create i3 config folder
   file: path=/home/{{ username }}/.config/regolith/i3 state=directory
 
 - name: Upload custom i3 config
