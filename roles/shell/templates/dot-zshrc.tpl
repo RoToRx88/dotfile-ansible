@@ -4,6 +4,8 @@ source /home/{{ username }}/.zsh/antigen.zsh
 # Load antigen configuration
 antigen init /home/{{ username }}/.config/.antigenrc
 
+export EDITOR="vim"
+
 alias l="ls -l"
 alias la="ls -la"
 alias sl="ls"
