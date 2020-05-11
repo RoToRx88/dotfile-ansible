@@ -42,6 +42,9 @@ set showmatch
 " Line numbers
 set number
 
+" Underline the current cursor line
+set cursorline
+
 " Smart numbers
 set relativenumber
 
