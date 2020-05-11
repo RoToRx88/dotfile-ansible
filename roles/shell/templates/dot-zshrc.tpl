@@ -5,6 +5,8 @@ source /home/{{ username }}/.zsh/antigen.zsh
 antigen init /home/{{ username }}/.config/.antigenrc
 
 export EDITOR="vim"
+# Export pip3 bin folder
+export PATH="$PATH:{{ ansible_env.HOME }}/.local/bin"
 
 alias l="ls -l"
 alias la="ls -la"
