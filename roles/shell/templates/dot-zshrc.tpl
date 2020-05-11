@@ -7,6 +7,8 @@ antigen init /home/{{ username }}/.config/.antigenrc
 export EDITOR="vim"
 # Export pip3 bin folder
 export PATH="$PATH:{{ ansible_env.HOME }}/.local/bin"
+# Export personal bin folder
+export PATH="$PATH:{{ ansible_env.HOME }}/bin"
 
 alias l="ls -l"
 alias la="ls -la"
