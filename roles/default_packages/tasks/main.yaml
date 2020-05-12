@@ -38,6 +38,7 @@
       - tig
       - make
       - yarn
+      - flameshot
 
 - name: Install vs-code from snap
   become: yes

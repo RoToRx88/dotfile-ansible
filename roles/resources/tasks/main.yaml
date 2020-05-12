@@ -5,11 +5,6 @@
     src: dot-Xresources
     dest: /home/{{ username }}/.Xresources
 
-- name: Upload regolth Xresource file
-  copy:
-    src: dot-Xresources-regolith
-    dest: /home/{{ username }}/.Xresources-regolith
-
 - name: Upload xinitrc file
   copy:
     src: dot-xinitrc

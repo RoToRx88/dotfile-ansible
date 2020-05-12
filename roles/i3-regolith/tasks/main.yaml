@@ -30,3 +30,8 @@
     src: config-i3
     dest: /home/{{ username }}/.config/regolith/i3/config
     backup: yes
+
+- name: Upload regolith Xresource file
+  copy:
+    src: dot-Xresources-regolith
+    dest: /home/{{ username }}/.Xresources-regolith
