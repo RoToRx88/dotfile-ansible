@@ -1,8 +1,8 @@
 # Load antigen
-source /home/{{ username }}/.zsh/antigen.zsh
+source {{ ansible_env.HOME }}/.zsh/antigen.zsh
 
 # Load antigen configuration
-antigen init /home/{{ username }}/.config/.antigenrc
+antigen init {{ ansible_env.HOME }}/.config/.antigenrc
 
 export EDITOR="vim"
 # Export pip3 bin folder

@@ -3,36 +3,36 @@
 - name: Upload Xresources file
   copy:
     src: dot-Xresources
-    dest: /home/{{ username }}/.Xresources
+    dest: {{ ansible_env.HOME }}/.Xresources
 
 - name: Upload xinitrc file
   copy:
     src: dot-xinitrc
-    dest: /home/{{ username }}/.xinitrc
+    dest: {{ ansible_env.HOME }}/.xinitrc
 
 - name: Ensure local folders are present
   file:
     path: "{{ item }}"
     state: directory
   loop:
-    - "/home/{{ username }}/.local/share/fonts/"
-    - "/home/{{ username }}/go"
-    - "/home/{{ username }}/go/bin"
-    - "/home/{{ username }}/go/pkg"
-    - "/home/{{ username }}/go/src"
+    - "{{ ansible_env.HOME }}/.local/share/fonts/"
+    - "{{ ansible_env.HOME }}/go"
+    - "{{ ansible_env.HOME }}/go/bin"
+    - "{{ ansible_env.HOME }}/go/pkg"
+    - "{{ ansible_env.HOME }}/go/src"
 
 - name: Upload fonts  # TODO: Download fonts from JetBrains' github to get newest version
   copy:
     src: fonts/
-    dest: /home/{{ username }}/.local/share/fonts/
+    dest: {{ ansible_env.HOME }}/.local/share/fonts/
 
 - name: Ensure wallpaper is present
   copy:
     src: wallpaper.png
-    dest: /home/{{ username }}/.wallpaper.png
+    dest: {{ ansible_env.HOME }}/.wallpaper.png
 
 - name: Ensure wallpaper is in use
-  shell: gsettings set org.gnome.desktop.background picture-uri /home/{{ username }}/.wallpaper.png
+  shell: gsettings set org.gnome.desktop.background picture-uri {{ ansible_env.HOME }}/.wallpaper.png
 
 - name: Ensure urxvt is default terminal
   shell: gsettings set org.gnome.desktop.default-applications.terminal exec urxvt

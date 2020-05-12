@@ -23,15 +23,15 @@
   shell: regolith-look set ubuntu
 
   - name: Create i3 config folder
-  file: path=/home/{{ username }}/.config/regolith/i3 state=directory
+  file: path={{ ansible_env.HOME }}/.config/regolith/i3 state=directory
 
 - name: Upload custom i3 config
   template:
     src: config-i3
-    dest: /home/{{ username }}/.config/regolith/i3/config
+    dest: {{ ansible_env.HOME }}/.config/regolith/i3/config
     backup: yes
 
 - name: Upload regolith Xresource file
   copy:
     src: dot-Xresources-regolith
-    dest: /home/{{ username }}/.Xresources-regolith
+    dest: {{ ansible_env.HOME }}/.Xresources-regolith

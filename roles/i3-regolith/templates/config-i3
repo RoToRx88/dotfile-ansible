@@ -280,7 +280,7 @@ exec --no-startup-id compton -f --config /etc/xdg/compton.conf
 exec --no-startup-id /usr/bin/unclutter -b --timeout 4
 
 # Draw the desktop background.  Randomly select from a series of photos starting with ESP_
-exec_always --no-startup-id sleep 60; feh --bg-fill /home/{{ username }}/.wallpaper.png
+exec_always --no-startup-id sleep 60; feh --bg-fill {{ ansible_env.HOME }}/.wallpaper.png
 
 # Refresh wallpaper when monitor configuration changes.
 #exec --no-startup-id /usr/bin/xeventbind resolution /usr/bin/wallpaper-refresh.sh

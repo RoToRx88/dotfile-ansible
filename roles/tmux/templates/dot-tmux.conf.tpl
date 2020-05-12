@@ -1,4 +1,4 @@
-source-file "/home/{{ username }}/.tmux/tmux-themepack/basic.tmuxtheme"
+source-file "{{ ansible_env.HOME }}/.tmux/tmux-themepack/basic.tmuxtheme"
 set -g default-terminal "screen-256color"
 set-option -g allow-rename off
 set-option -g status-position top
