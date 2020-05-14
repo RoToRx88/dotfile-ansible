@@ -5,10 +5,16 @@ source {{ ansible_env.HOME }}/.zsh/antigen.zsh
 antigen init {{ ansible_env.HOME }}/.config/.antigenrc
 
 export EDITOR="vim"
+
 # Export pip3 bin folder
 export PATH="$PATH:{{ ansible_env.HOME }}/.local/bin"
+
 # Export personal bin folder
 export PATH="$PATH:{{ ansible_env.HOME }}/bin"
+
+# Export deno bin folder
+export DENO_INSTALL="{{ ansible_env.HOME }}/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 alias l="ls -l"
 alias la="ls -la"

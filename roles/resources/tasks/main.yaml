@@ -3,12 +3,12 @@
 - name: Upload Xresources file
   copy:
     src: dot-Xresources
-    dest: {{ ansible_env.HOME }}/.Xresources
+    dest: "{{ ansible_env.HOME }}/.Xresources"
 
 - name: Upload xinitrc file
   copy:
     src: dot-xinitrc
-    dest: {{ ansible_env.HOME }}/.xinitrc
+    dest: "{{ ansible_env.HOME }}/.xinitrc"
 
 - name: Ensure local folders are present
   file:
@@ -24,12 +24,12 @@
 - name: Upload fonts  # TODO: Download fonts from JetBrains' github to get newest version
   copy:
     src: fonts/
-    dest: {{ ansible_env.HOME }}/.local/share/fonts/
+    dest: "{{ ansible_env.HOME }}/.local/share/fonts/"
 
 - name: Ensure wallpaper is present
   copy:
     src: wallpaper.png
-    dest: {{ ansible_env.HOME }}/.wallpaper.png
+    dest: "{{ ansible_env.HOME }}/.wallpaper.png"
 
 - name: Ensure wallpaper is in use
   shell: gsettings set org.gnome.desktop.background picture-uri {{ ansible_env.HOME }}/.wallpaper.png
