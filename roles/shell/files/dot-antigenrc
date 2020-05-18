@@ -7,6 +7,7 @@ antigen bundle docker
 antigen bundle man
 antigen bundle fzf
 antigen bundle autojump
+antigen bundle colored-man-pages
 
 # Load custom bundles for oh-my-zsh
 antigen bundle zsh-users/zsh-completions
