@@ -19,4 +19,4 @@
 
 - name: Enforce zsh as default shell
   become: yes
-  command: chsh -s /usr/bin/zsh {{ username }}
+  command: chsh -s /usr/bin/zsh {{ ansible_user }}

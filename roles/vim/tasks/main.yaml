@@ -1,18 +1,18 @@
 ---
 - name: Create Vim folder
-  file: path={{ ansible_env.HOME }}/.vim state=directory owner={{ username }} group={{ username }}
+  file: path={{ ansible_env.HOME }}/.vim state=directory owner={{ ansible_user }} group={{ ansible_user }}
 
 - name: Create undo vim folder
-  file: path={{ ansible_env.HOME }}/.vim/undo state=directory owner={{ username }} group={{ username }}
+  file: path={{ ansible_env.HOME }}/.vim/undo state=directory owner={{ ansible_user }} group={{ ansible_user }}
 
 - name: Create swap vim folder
-  file: path={{ ansible_env.HOME }}/.vim/swap state=directory owner={{ username }} group={{ username }}
+  file: path={{ ansible_env.HOME }}/.vim/swap state=directory owner={{ ansible_user }} group={{ ansible_user }}
 
 - name: Create autoload vim folder
-  file: path={{ ansible_env.HOME }}/.vim/autoload state=directory owner={{ username }} group={{ username }}
+  file: path={{ ansible_env.HOME }}/.vim/autoload state=directory owner={{ ansible_user }} group={{ ansible_user }}
 
 - name: Get vim-plug
   get_url: url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim dest={{ ansible_env.HOME }}/.vim/autoload/plug.vim
 
 - name: Upload vim configuration file
-  copy: src=dot-vimrc dest={{ ansible_env.HOME }}/.vimrc owner={{ username }} group={{ username }}
+  copy: src=dot-vimrc dest={{ ansible_env.HOME }}/.vimrc owner={{ ansible_user }} group={{ ansible_user }}

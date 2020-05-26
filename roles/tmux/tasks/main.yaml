@@ -1,10 +1,10 @@
 ---
 - name: Create Tmux folder
-  file: path="{{ ansible_env.HOME }}/.tmux" state=directory owner={{ username }} group={{ username }}
+  file: path="{{ ansible_env.HOME }}/.tmux" state=directory owner={{ ansible_user }} group={{ ansible_user }}
 
 - name: Upload tmux configuration file
   template:
-    src=dot-tmux.conf.tpl dest="{{ ansible_env.HOME }}/.tmux.conf" owner={{ username }} group={{ username }}
+    src=dot-tmux.conf.tpl dest="{{ ansible_env.HOME }}/.tmux.conf" owner={{ ansible_user }} group={{ ansible_user }}
 
 - name: Clone tmux plugin manager repository
   git:
