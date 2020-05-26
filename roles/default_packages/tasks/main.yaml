@@ -40,14 +40,13 @@
       - yarn
       - flameshot
 
-- name: Install vs-code from snap
+- name: Install packages from snap
   become: yes
   snap:
-    name: code
-    classic: yes
+    name: "{{ item.name }}"
+    classic: "{{ item.classic }}"
+  loop:
+    - { 'name': 'code', 'classic': 'yes' }
+    - { 'name': 'go', 'classic': 'yes' }
+    - { 'name': 'bat', 'classic': 'no' }
 
-- name: Install golang from snap
-  become: yes
-  snap:
-    name: go
-    classic: yes
