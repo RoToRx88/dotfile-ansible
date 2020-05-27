@@ -10,7 +10,7 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'chr4/nginx.vim'
 Plug 'SirVer/ultisnips'
-"Plug 'phenomenes/ansible-snippets', { 'tag': 'v2.7.9' }
+Plug 'phenomenes/ansible-snippets', { 'tag': 'v2.7.9' }
 call plug#end()
 
 "-- MISC --"
