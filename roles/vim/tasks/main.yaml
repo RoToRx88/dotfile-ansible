@@ -1,4 +1,11 @@
 ---
+- name: Ensure Vim is installed
+  become: yes
+  apt:
+    pkg: vim
+    state: present
+    update_cache: yes
+
 - name: Ensure all folders are persent
   file:
     path: "{{ ansible_env.HOME }}/{{ item }}"
