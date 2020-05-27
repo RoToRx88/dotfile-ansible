@@ -39,6 +39,7 @@
       - make
       - yarn
       - flameshot
+      - httpie
 
 - name: Install packages from snap
   become: yes
