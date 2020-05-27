@@ -40,6 +40,7 @@
       - yarn
       - flameshot
       - httpie
+      - bat
 
 - name: Install packages from snap
   become: yes
@@ -49,5 +50,4 @@
   loop:
     - { 'name': 'code', 'classic': 'yes' }
     - { 'name': 'go', 'classic': 'yes' }
-    - { 'name': 'bat', 'classic': 'no' }
 
