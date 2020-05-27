@@ -1,15 +1,16 @@
 ---
-- name: Create Vim folder
-  file: path={{ ansible_env.HOME }}/.vim state=directory owner={{ ansible_user }} group={{ ansible_user }}
-
-- name: Create undo vim folder
-  file: path={{ ansible_env.HOME }}/.vim/undo state=directory owner={{ ansible_user }} group={{ ansible_user }}
-
-- name: Create swap vim folder
-  file: path={{ ansible_env.HOME }}/.vim/swap state=directory owner={{ ansible_user }} group={{ ansible_user }}
-
-- name: Create autoload vim folder
-  file: path={{ ansible_env.HOME }}/.vim/autoload state=directory owner={{ ansible_user }} group={{ ansible_user }}
+- name: Ensure all folders are persent
+  file:
+    path: "{{ ansible_env.HOME/{{ item }}"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+  loop:
+    - ".vim"
+    - ".vim/undo"
+    - ".vim/swap"
+    - ".vim/autoload"
+    - ".vim/UltiSnips"
 
 - name: Get vim-plug
   get_url: url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim dest={{ ansible_env.HOME }}/.vim/autoload/plug.vim
