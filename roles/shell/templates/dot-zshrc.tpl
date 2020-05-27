@@ -57,6 +57,8 @@ alias hp="head package.json"
 alias drive="rclone mount gdrive: ~/n9-drive"
 alias mm="mindmap"  # Installed over npm
 alias monday="sudo -E monday"
+alias fuck="sudo apt install -y "
+alias bat="batcat"
 
 # Base16 Shell
 #BASE16_SHELL="$HOME/.config/base16-shell/"
