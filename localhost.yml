@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  roles:
+    - role: default_packages
+      tags: ["default_packages"]
+
+    - role: resources
+      tags: ["resources"]
+
+    - role: vim
+      tags: ["vim"]
+
+    - role: tmux
+      tags: ["tmux"]
+
+    - role: shell
+      tags: ["shell"]
+  vars:
+    - gitssh_email: nicolas.comte@arneogroup.com
