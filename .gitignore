@@ -1,5 +1,6 @@
 .DS_Store
 playbook.yml
 playbook.yaml
+inventory
 todo
 .todo
