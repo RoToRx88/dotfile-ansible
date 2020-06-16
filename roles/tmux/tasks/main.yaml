@@ -1,4 +1,10 @@
 ---
+- name: Ensure tmux is present on system
+  become: yes
+  apt:
+    pkg:
+      - tmux
+
 - name: Create Tmux folder
   file: path="{{ ansible_env.HOME }}/.tmux" state=directory owner={{ ansible_user }} group={{ ansible_user }}
 

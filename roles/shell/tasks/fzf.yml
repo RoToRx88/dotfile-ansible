@@ -1,0 +1,11 @@
+---
+
+- name: Ensure fzf is cloned
+  git:
+    dest: "{{ ansible_env.HOME }}/.fzf"
+    repo: https://github.com/junegunn/fzf.git
+    depth: 1
+
+- name: Ensure fzf is installed
+  shell:
+    cmd: "{{ ansible_env.HOME }}/.fzf/install --all --key-bindings --completion --update-rc"

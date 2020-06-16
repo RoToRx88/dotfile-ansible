@@ -16,6 +16,12 @@ export PATH="$PATH:{{ ansible_env.HOME }}/bin"
 export DENO_INSTALL="{{ ansible_env.HOME }}/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+# Source functions folder
+source ~/.zsh/functions-ansible_dotfiles.zsh
+
+alias t="tree -L 1"
+alias tt="tree -L 2"
+alias ttt="tree -L 3"
 alias l="ls -l"
 alias la="ls -la"
 alias sl="ls"
@@ -65,3 +71,9 @@ alias bat="batcat"
 #[ -n "$PS1" ] && \
 #    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
 #        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Linked to this antigen bundle Aloxaf/fzf-tab
+enable-fzf-tab
+

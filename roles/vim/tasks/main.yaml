@@ -25,6 +25,6 @@
 - name: Upload vim configuration file
   copy:
     src: dot-vimrc
-    dest: {{ ansible_env.HOME }}/.vimrc
-    owner: {{ ansible_user }}
-    group: {{ ansible_user }}
+    dest: "{{ ansible_env.HOME }}/.vimrc"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"

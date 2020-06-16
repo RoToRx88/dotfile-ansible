@@ -19,28 +19,33 @@
   become: yes
   apt:
     pkg:
-      - google-chrome-stable
-      - lastpass-cli  #lpass
-      - curl
-      - vim
-      - git
-      - htop
-      - zsh
-      - rxvt-unicode  #urxvt
-      - tmux
-      - tmate
-      - jq
-      - feh
-      - clipit
-      - fzf
       - ack
+      - aria2
       - autojump
-      - tig
-      - make
-      - yarn
-      - flameshot
-      - httpie
       - bat
+      - clipit
+      - curl
+      - feh
+      - flameshot
+      - fzf
+      - git
+      - google-chrome-stable
+      - grc
+      - htop
+      - httpie
+      - jq
+      - lastpass-cli  # lpass
+      - make
+      - mpv
+      - python3-virtualenv
+      - rxvt-unicode  # urxvt
+      - tig
+      - tmate
+      - tmux
+      - vim
+      - visidata  # vd
+      - yarn
+      - zsh
 
 - name: Install packages from snap
   become: yes
@@ -50,4 +55,3 @@
   loop:
     - { 'name': 'code', 'classic': 'yes' }
     - { 'name': 'go', 'classic': 'yes' }
-
