@@ -1,19 +1,23 @@
 # Export of functions used to edit common dotfiles and update them through
 # ansible so everything stay up to date all the time.
 
-vzsh() {
+function vzsh() {
   vim ~/git/dotfile-ansible/roles/shell/templates/dot-zshrc.tpl
 }
 
-vzshfunctions() {
+function vzshfunctions() {
   vim ~/git/dotfile-ansible/roles/shell/files/functions-ansible_dotfiles.zsh
 }
 
-vantigen() {
+function vzshaliases() {
+  vim ~/git/dotfile-ansible/roles/shell/files/aliases.zsh
+}
+
+function vantigen() {
   vim ~/git/dotfile-ansible/roles/shell/files/dot-antigenrc
 }
 
-vvim() {
+function vvim() {
   vim ~/git/dotfile-ansible/roles/vim/files/dot-vimrc
 }
 

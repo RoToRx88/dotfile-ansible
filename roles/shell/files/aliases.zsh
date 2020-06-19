@@ -1,23 +1,4 @@
-# Load antigen
-source {{ ansible_env.HOME }}/.zsh/antigen.zsh
-
-# Load antigen configuration
-antigen init {{ ansible_env.HOME }}/.config/.antigenrc
-
-export EDITOR="vim"
-
-# Export pip3 bin folder
-export PATH="$PATH:{{ ansible_env.HOME }}/.local/bin"
-
-# Export personal bin folder
-export PATH="$PATH:{{ ansible_env.HOME }}/bin"
-
-# Export deno bin folder
-export DENO_INSTALL="{{ ansible_env.HOME }}/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-
-# Source functions folder
-source ~/.zsh/functions-ansible_dotfiles.zsh
+# This file contains all the aliases I defined
 
 alias t="tree -L 1"
 alias tt="tree -L 2"
@@ -27,7 +8,8 @@ alias la="ls -la"
 alias sl="ls"
 alias gl="git l"
 alias gs="git status"
-alias gd="git diff --color-words"
+#alias gd="git diff --color-words | diff-so-fancy | less"
+alias gd="git diff"
 alias gc="git commit"
 alias gca="git commit -a"
 alias gcan="git commit --all --no-verify"
@@ -65,15 +47,3 @@ alias mm="mindmap"  # Installed over npm
 alias monday="sudo -E monday"
 alias fuck="sudo apt install -y "
 alias bat="batcat"
-
-# Base16 Shell
-#BASE16_SHELL="$HOME/.config/base16-shell/"
-#[ -n "$PS1" ] && \
-#    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-#        eval "$("$BASE16_SHELL/profile_helper.sh")"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Linked to this antigen bundle Aloxaf/fzf-tab
-enable-fzf-tab
-

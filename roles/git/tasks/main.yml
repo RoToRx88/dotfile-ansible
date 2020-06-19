@@ -1,0 +1,4 @@
+- name: Ensure gitconfig is present and up to date
+  template:
+    dest: "{{ ansible_env.HOME }}/.gitconfig"
+    src: dot-gitconfig.j2

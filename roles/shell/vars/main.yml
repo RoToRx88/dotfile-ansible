@@ -1,0 +1,6 @@
+---
+# Allow one to install and setup shell base16 style plugin
+shell_base16_enabled: false
+
+# Export a set of custom zsh functions to edit on the go my dotfiles whithin this repo
+export_ansible_functions: false

@@ -1,9 +1,11 @@
 ---
 - hosts: localhost
+  vars:
+    git_email: nicolas.comte@arneo-group.fr
+    git_name: COMTE Nicolas
+    git_diff_so_fancy_enabled: true
+    export_ansible_functions: true
   roles:
-    - role: default_packages
-      tags: ["default_packages"]
-
     - role: resources
       tags: ["resources"]
 
@@ -15,5 +17,6 @@
 
     - role: shell
       tags: ["shell"]
-  vars:
-    - gitssh_email: nicolas.comte@arneogroup.com
+
+    - role: git
+      tags: ["git"]

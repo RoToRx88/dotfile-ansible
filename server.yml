@@ -1,6 +1,7 @@
 ---
 - hosts: server
   become: yes
+
   roles:
     - role: vim
       tags: ["vim"]
@@ -10,5 +11,3 @@
 
     - role: shell
       tags: ["shell"]
-  vars:
-    - gitssh_email: nicolas.comte@arneogroup.com

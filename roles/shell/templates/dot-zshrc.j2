@@ -1,0 +1,38 @@
+# Load antigen
+source {{ ansible_env.HOME }}/.zsh/antigen.zsh
+
+# Load antigen configuration
+antigen init {{ ansible_env.HOME }}/.config/.antigenrc
+
+export EDITOR="vim"
+
+# Export pip3 bin folder
+export PATH="$PATH:{{ ansible_env.HOME }}/.local/bin"
+
+# Export personal bin folder
+export PATH="$PATH:{{ ansible_env.HOME }}/bin"
+
+# Export deno bin folder
+export DENO_INSTALL="{{ ansible_env.HOME }}/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+# Source functions folder
+source ~/.zsh/functions-ansible_dotfiles.zsh
+
+# Source aliases
+source ~/.zsh/aliases.zsh
+
+{% if shell_base16_enabled is defined and shell_base16_enabled is true %}
+
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+{% endif %}
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Linked to this antigen bundle Aloxaf/fzf-tab
+enable-fzf-tab
+

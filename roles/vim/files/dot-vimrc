@@ -11,6 +11,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'chr4/nginx.vim'
 Plug 'SirVer/ultisnips'
 Plug 'phenomenes/ansible-snippets', { 'tag': 'v2.7.9' }
+Plug 'tpope/vim-surround'
 call plug#end()
 
 "-- MISC --"
@@ -154,7 +155,7 @@ nmap <Leader>P :set nopaste<cr>
 nmap <Leader>w :w<cr>
 nmap <Leader>x :x<cr>
 noremap <Leader>c :q<cr>
-nmap <Leader>fc :q!<cr>
+nmap <Leader>fc :qa!<cr>
 
 " VimGrep
 nmap [q :cprev<cr>

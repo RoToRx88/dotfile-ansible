@@ -19,33 +19,40 @@
   become: yes
   apt:
     pkg:
-      - ack
-      - aria2
-      - autojump
-      - bat
-      - clipit
+      - ack  # grep, but better for programmer
+      - aria2  # Nice cli download threader / torrent downloader
+      - autojump  # Used in conjunction with zsh to autojump
+      - bat  # Better cat
+      - clipit  # Allow me to copy paste content with shell pipe
       - curl
-      - feh
-      - flameshot
-      - fzf
+      - feh  # Image viewer, used to set desktop background
+      - flameshot  # For screenshots
+      - fzf  # Fuzzy interface
       - git
       - google-chrome-stable
-      - grc
+      - grc  # Colorise cli commands like ping ls etc
       - htop
-      - httpie
-      - jq
+      - httpie  # Modern alternative to curl
+      - jq  # JSON manipulation tool
       - lastpass-cli  # lpass
       - make
-      - mpv
+      - mpv  # Video player
       - python3-virtualenv
-      - rxvt-unicode  # urxvt
-      - tig
-      - tmate
+      - rxvt-unicode  # urxvt terminal
+      - tig  # Git gui full of nice features and tree overview
+      - tmate  # Allow instant remote tmux interface like TeamViewer
       - tmux
       - vim
       - visidata  # vd
       - yarn
       - zsh
+      - nnn  # Lightweight cli file manager
+      - tldr  # Gives examples of common commands
+      - pandoc  # Convert doc
+      - texlive-latex-base  # (texlive*) Required for pandoc md to pdf
+      - texlive-fonts-recommended
+      - texlive-fonts-extra
+      - anki  # flashcard app
 
 - name: Install packages from snap
   become: yes
