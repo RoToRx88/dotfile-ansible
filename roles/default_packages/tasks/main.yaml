@@ -38,6 +38,7 @@
       - make
       - mpv  # Video player
       - python3-virtualenv
+      - rename # Script that helps rename files
       - rxvt-unicode  # urxvt terminal
       - tig  # Git gui full of nice features and tree overview
       - tmate  # Allow instant remote tmux interface like TeamViewer
