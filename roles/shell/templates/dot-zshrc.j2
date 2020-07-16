@@ -9,6 +9,9 @@ export EDITOR="vim"
 # Export pip3 bin folder
 export PATH="$PATH:{{ ansible_env.HOME }}/.local/bin"
 
+# Export golang bin folder
+export PATH="$PATH:{{ ansible_env.HOME }}/go/bin"
+
 # Export personal bin folder
 export PATH="$PATH:{{ ansible_env.HOME }}/bin"
 
@@ -22,7 +25,7 @@ source ~/.zsh/functions-ansible_dotfiles.zsh
 # Source aliases
 source ~/.zsh/aliases.zsh
 
-{% if shell_base16_enabled is defined and shell_base16_enabled is true %}
+{% if shell_base16_enabled is defined and shell_base16_enabled %}
 
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \

@@ -2,7 +2,7 @@
 # ansible so everything stay up to date all the time.
 
 function vzsh() {
-  vim ~/git/dotfile-ansible/roles/shell/templates/dot-zshrc.tpl
+  vim ~/git/dotfile-ansible/roles/shell/templates/dot-zshrc.j2
 }
 
 function vzshfunctions() {

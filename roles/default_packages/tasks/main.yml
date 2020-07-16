@@ -20,6 +20,7 @@
   apt:
     pkg:
       - ack  # grep, but better for programmer
+      - anki  # flashcard app
       - aria2  # Nice cli download threader / torrent downloader
       - autojump  # Used in conjunction with zsh to autojump
       - bat  # Better cat
@@ -37,23 +38,23 @@
       - lastpass-cli  # lpass
       - make
       - mpv  # Video player
+      - nnn  # Lightweight cli file manager
+      - pandoc  # Convert doc
       - python3-virtualenv
       - rename # Script that helps rename files
       - rxvt-unicode  # urxvt terminal
+      - texlive-fonts-extra
+      - texlive-fonts-recommended
+      - texlive-latex-base  # (texlive*) Required for pandoc md to pdf
       - tig  # Git gui full of nice features and tree overview
+      - tldr  # Gives examples of common commands
       - tmate  # Allow instant remote tmux interface like TeamViewer
       - tmux
+      - traceroute
       - vim
       - visidata  # vd
       - yarn
       - zsh
-      - nnn  # Lightweight cli file manager
-      - tldr  # Gives examples of common commands
-      - pandoc  # Convert doc
-      - texlive-latex-base  # (texlive*) Required for pandoc md to pdf
-      - texlive-fonts-recommended
-      - texlive-fonts-extra
-      - anki  # flashcard app
 
 - name: Install packages from snap
   become: yes

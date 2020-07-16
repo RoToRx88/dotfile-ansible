@@ -28,7 +28,7 @@
 
 - name: Upload zsh configuration
   template:
-    src: dot-zshrc.tpl
+    src: dot-zshrc.j2
     dest: "{{ ansible_env.HOME }}/.zshrc"
 
 - name: Enforce zsh as default shell
@@ -39,13 +39,13 @@
   git:
     repo: "https://github.com/chriskempson/base16-shell.git"
     dest: "{{ ansible_env.HOME }}/.config/base16-shell"
-  when: shell_base16_enabled is defined and shell_base16_enabled is true
+  when: shell_base16_enabled is defined and shell_base16_enabled
 
 - name: Ensure zsh exported functions are presents
   copy:
     src: functions-ansible_dotfiles.zsh
     dest: "{{ ansible_env.HOME }}/.zsh/functions-ansible_dotfiles.zsh"
-  when: export_ansible_functions  is defined and export_ansible_functions is true
+  when: export_ansible_functions  is defined and export_ansible_functions
 
 - name: Ensure aliases are presents and up to date
   copy:

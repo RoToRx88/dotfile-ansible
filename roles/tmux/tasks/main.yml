@@ -10,7 +10,7 @@
 
 - name: Upload tmux configuration file
   template:
-    src=dot-tmux.conf.tpl dest="{{ ansible_env.HOME }}/.tmux.conf" owner={{ ansible_user }} group={{ ansible_user }}
+    src=dot-tmux.conf.j2 dest="{{ ansible_env.HOME }}/.tmux.conf" owner={{ ansible_user }} group={{ ansible_user }}
 
 - name: Clone tmux plugin manager repository
   git:

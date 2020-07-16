@@ -1,17 +1,24 @@
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-vinegar'
-Plug 'scrooloose/nerdtree'
+Plug 'SirVer/ultisnips'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'chr4/nginx.vim'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'gabrielelana/vim-markdown'
+Plug 'hashivim/vim-terraform'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'itchyny/calendar.vim'
+Plug 'mileszs/ack.vim'
+Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
+Plug 'phenomenes/ansible-snippets', { 'tag': 'v2.7.9' }
+Plug 'psliwka/vim-smoothie'
+Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'sheerun/vim-polyglot'
-Plug 'gabrielelana/vim-markdown'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'chr4/nginx.vim'
-Plug 'SirVer/ultisnips'
-Plug 'phenomenes/ansible-snippets', { 'tag': 'v2.7.9' }
-Plug 'tpope/vim-surround'
 call plug#end()
 
 "-- MISC --"
@@ -155,7 +162,7 @@ nmap <Leader>P :set nopaste<cr>
 nmap <Leader>w :w<cr>
 nmap <Leader>x :x<cr>
 noremap <Leader>c :q<cr>
-nmap <Leader>fc :qa!<cr>
+nmap <Leader>fc :qa<cr>
 
 " VimGrep
 nmap [q :cprev<cr>
@@ -220,11 +227,22 @@ nmap <s-tab> gT
 
 "-- PLUGINS --"
 """""""""""""""
+"/
+"/ ansible-vim
+"/
+"/ Reset indent to 0 after two new lines
+let g:ansible_unindent_after_newline = 1
+
+"/ Highlight additional keywords in playbooks
+let g:ansible_extra_keywords_highlight = 1
+
+"/ Force filetype
+au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml
+
 
 "/
 "/ CtrlP
 "/
-
 let g:ctrlp_custom_ignore = 'node_modules/DS_Store\|git\|vendor'
 
 let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:30,results:30'
@@ -236,7 +254,6 @@ let g:ctrlp_cmd = ':NERDTreeClose\|CtrlP'
 "/
 "/ NerdTree
 "/
-
 " Prevent NerdTree from overriding - vinegar shortcut
 let NERDTreeHijackNetrw = 0
 let NERDTreeShowHidden = 1
@@ -278,18 +295,35 @@ let g:polyglot_disabled = ['markdown']
 "/
 "/ UltiSnips
 "/
-
 let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 let g:UltiSnipsEditSplit="vertical"
 
+"/
+"/ Calendar.vim
+"/
+source ~/.cache/calendar.vim/credentials.vim
+let g:calendar_google_calendar = 1
+
+"/
+"/ LeaderF
+"/
+
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+" let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
+let g:Lf_ShowDevIcons = 0
+let g:Lf_ShortcutF = "<leader>ff"
+noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+" noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
 
 "/
 "/ Custom filetype
 "/
-
 vnoremap . :norm.<CR>
 
 augroup vagrant

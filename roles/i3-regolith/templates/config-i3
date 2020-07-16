@@ -196,7 +196,8 @@ bindsym $mod+Shift+e exit
 #bindsym $mod+Escape exec gnome-screensaver-command --lock
 #bindsym $mod+9 exec "/usr/local/bin/weather-lock.sh"\
 # Unsing i3lock with the -n option in order to not fork the process and execute a command after unlock is performed
-bindsym $mod+9 exec i3lock -efi ~/Pictures/dual-screen_horizontal_nobrand.png
+#bindsym $mod+9 exec i3lock -efi ~/Pictures/dual-screen_horizontal_nobrand.png
+bindsym $mod+9 exec betterlockscreen -l
 # put the system to sleep
 
 # shortcuts for common system configuration tasks
