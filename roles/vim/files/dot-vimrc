@@ -14,11 +14,13 @@ Plug 'phenomenes/ansible-snippets', { 'tag': 'v2.7.9' }
 Plug 'psliwka/vim-smoothie'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
+Plug 'stevearc/vim-arduino'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vitapluvia/vim-gurl'
 call plug#end()
 
 "-- MISC --"
@@ -120,6 +122,10 @@ inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 " Override default Leader with the ',' key
 let mapleader = ' '
 
+" Remap yank / paste to use CLIPBOARD
+"noremap <Leader>c "+y
+"noremap <Leader>v "+p
+
 " Make it easy to edit Vimrc
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 
@@ -161,7 +167,7 @@ nmap <Leader>P :set nopaste<cr>
 " Save & quit actions
 nmap <Leader>w :w<cr>
 nmap <Leader>x :x<cr>
-noremap <Leader>c :q<cr>
+nmap <Leader>c :q<cr>
 nmap <Leader>fc :qa<cr>
 
 " VimGrep
@@ -227,6 +233,23 @@ nmap <s-tab> gT
 
 "-- PLUGINS --"
 """""""""""""""
+
+"/
+"/ vim-arduino
+"/
+"/ Develop, compile, upload arduino code from within vim
+
+let g:arduino_cmd = '/usr/bin/arduino'
+let g:arduino_dir = '/usr/share/arduino'
+
+"/
+"/ vim-gurl
+"/
+"/ Use CLIPBOARD register when generating link to line ( use <Leader>+t )
+
+let g:vimgurl_yank_register = '+'
+
+
 "/
 "/ ansible-vim
 "/

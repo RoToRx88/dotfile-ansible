@@ -47,3 +47,4 @@ alias mm="mindmap"  # Installed over npm
 alias monday="sudo -E monday"
 alias fuck="sudo apt install -y "
 alias bat="batcat"
+alias ack="ack --follow"
