@@ -19,6 +19,11 @@ export PATH="$PATH:{{ ansible_env.HOME }}/bin"
 export DENO_INSTALL="{{ ansible_env.HOME }}/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+# Setup for typewritten theme
+export TYPEWRITTEN_PROMPT_LAYOUT="pure"
+export TYPEWRITTEN_CURSOR="block"
+
+
 # Source functions folder
 source ~/.zsh/functions-ansible_dotfiles.zsh
 
