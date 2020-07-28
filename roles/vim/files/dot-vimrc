@@ -7,7 +7,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'gabrielelana/vim-markdown'
 Plug 'hashivim/vim-terraform'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'itchyny/calendar.vim'
 Plug 'mileszs/ack.vim'
 Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
 Plug 'phenomenes/ansible-snippets', { 'tag': 'v2.7.9' }
@@ -323,12 +322,6 @@ let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 let g:UltiSnipsEditSplit="vertical"
-
-"/
-"/ Calendar.vim
-"/
-source ~/.cache/calendar.vim/credentials.vim
-let g:calendar_google_calendar = 1
 
 "/
 "/ LeaderF

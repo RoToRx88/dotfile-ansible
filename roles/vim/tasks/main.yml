@@ -1,8 +1,8 @@
 ---
 - name: Ensure Vim is installed
   become: yes
-  apt:
-    pkg: vim
+  pacman:
+    name: vim
     state: present
     update_cache: yes
 
@@ -11,7 +11,7 @@
     path: "{{ ansible_env.HOME }}/{{ item }}"
     state: directory
     owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
+    group: "users"
   loop:
     - ".vim"
     - ".vim/undo"
@@ -27,4 +27,4 @@
     src: dot-vimrc
     dest: "{{ ansible_env.HOME }}/.vimrc"
     owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
+    group: "users"

@@ -1,8 +1,8 @@
 ---
 - name: Ensure package dependancies are installed
   become: yes
-  apt:
-    pkg:
+  pacman:
+    name:
       - zsh
       - autojump
       - git
