@@ -35,3 +35,7 @@ URxvt.font: xft:JetBrainsMono-Regular:size=10:antialias=true
 
 ! reduce spacing between each letter (highly related to the font 'inconsolata-dz')
 URxvt.letterSpace: 0.2
+
+
+!!--------------------------Fix cursor size
+Xcursor.size:  16       !  32, 48 or 64 may also be good values
