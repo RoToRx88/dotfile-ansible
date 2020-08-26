@@ -49,3 +49,7 @@ alias fuck="sudo apt install -y "
 alias bat="batcat"
 alias ack="ack --follow"
 alias cal="cal -m"
+alias cip="curl icanhazip.com"
+
+# Trash managment with `trash-cli`
+alias rmt="trash-put"

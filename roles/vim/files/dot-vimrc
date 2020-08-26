@@ -246,7 +246,8 @@ let g:arduino_dir = '/usr/share/arduino'
 "/
 "/ Use CLIPBOARD register when generating link to line ( use <Leader>+t )
 
-let g:vimgurl_yank_register = '+'
+noremap <leader>gr :call Gurl()<CR>
+"let g:vimgurl_yank_register = '+'
 
 
 "/

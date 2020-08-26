@@ -14,7 +14,8 @@ antigen bundle Aloxaf/fzf-tab
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle wting/autojump
+antigen bundle win0err/aphrodite-terminal-theme
+# antigen bundle wting/autojump
 
 # Load theme
 antigen theme reobin/typewritten
