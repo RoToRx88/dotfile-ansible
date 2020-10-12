@@ -2,7 +2,7 @@
 - name: Ensure Vim is installed
   become: yes
   pacman:
-    name: vim
+    name: gvim
     state: present
     update_cache: yes
 

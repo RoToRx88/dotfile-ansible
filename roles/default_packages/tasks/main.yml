@@ -57,6 +57,7 @@
       - visidata  # vd
       - yarn
       - zsh
+      - grv  # git cli as tig
       # - mycli (though pip) mysql client with autocomplete and syntax highlight
 
 - name: Install packages from snap
