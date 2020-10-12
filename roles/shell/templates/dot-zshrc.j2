@@ -23,12 +23,16 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 export TYPEWRITTEN_PROMPT_LAYOUT="pure"
 export TYPEWRITTEN_CURSOR="block"
 
-
 # Source functions folder
 source ~/.zsh/functions-ansible_dotfiles.zsh
 
 # Source aliases
 source ~/.zsh/aliases.zsh
+
+# Source thefuck for command autofix by typing fuck
+eval "$(thefuck --alias fuck)"
+
+# Stuff to keep at bottom
 
 {% if shell_base16_enabled is defined and shell_base16_enabled %}
 
@@ -38,6 +42,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 {% endif %}
+
+# Node Version Manager sourcing for arch linux
+# source /usr/share/nvm/init-nvm.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

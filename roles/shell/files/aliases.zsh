@@ -45,11 +45,12 @@ alias hp="head package.json"
 alias drive="rclone mount gdrive: ~/n9-drive"
 alias mm="mindmap"  # Installed over npm
 alias monday="sudo -E monday"
-alias fuck="sudo apt install -y "
-alias bat="batcat"
+#alias bat="batcat"
 alias ack="ack --follow"
 alias cal="cal -m"
 alias cip="curl icanhazip.com"
+alias sourcenvm="source /usr/share/nvm/init-nvm.sh"
+alias tf="terraform"
 
 # Trash managment with `trash-cli`
 alias rmt="trash-put"

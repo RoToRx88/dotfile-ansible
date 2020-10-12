@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+Plug 'dense-analysis/ale'  " Asynchronous Lint Engine
 Plug 'SirVer/ultisnips'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'chr4/nginx.vim'
@@ -7,6 +8,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'gabrielelana/vim-markdown'
 Plug 'hashivim/vim-terraform'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'kovetskiy/sxhkd-vim'
 Plug 'mileszs/ack.vim'
 Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
 Plug 'phenomenes/ansible-snippets', { 'tag': 'v2.7.9' }
@@ -14,6 +16,7 @@ Plug 'psliwka/vim-smoothie'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'stevearc/vim-arduino'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'

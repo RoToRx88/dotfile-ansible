@@ -18,6 +18,7 @@ antigen bundle win0err/aphrodite-terminal-theme
 # antigen bundle wting/autojump
 
 # Load theme
-antigen theme reobin/typewritten
+#antigen theme reobin/typewritten
+antigen theme win0err/aphrodite-terminal-theme
 
 antigen apply

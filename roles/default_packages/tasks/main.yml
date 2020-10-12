@@ -26,6 +26,7 @@
       - bat  # Better cat
       - clipit  # Allow me to copy paste content with shell pipe
       - curl
+      - espanso  # System wide snippets
       - feh  # Image viewer, used to set desktop background
       - flameshot  # For screenshots
       - fzf  # Fuzzy interface
@@ -43,6 +44,7 @@
       - python3-virtualenv
       - rename # Script that helps rename files
       - rxvt-unicode  # urxvt terminal
+      - silver-searcher  # ag
       - texlive-fonts-extra
       - texlive-fonts-recommended
       - texlive-latex-base  # (texlive*) Required for pandoc md to pdf
@@ -55,6 +57,7 @@
       - visidata  # vd
       - yarn
       - zsh
+      # - mycli (though pip) mysql client with autocomplete and syntax highlight
 
 - name: Install packages from snap
   become: yes
