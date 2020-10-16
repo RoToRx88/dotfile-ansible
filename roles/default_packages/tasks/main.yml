@@ -24,6 +24,7 @@
       - aria2  # Nice cli download threader / torrent downloader
       - autojump  # Used in conjunction with zsh to autojump
       - bat  # Better cat
+      - bpytop  # Stylish system monitor
       - clipit  # Allow me to copy paste content with shell pipe
       - curl
       - espanso  # System wide snippets
@@ -31,8 +32,10 @@
       - flameshot  # For screenshots
       - fzf  # Fuzzy interface
       - git
+      - glow  # markdown reader
       - google-chrome-stable
       - grc  # Colorise cli commands like ping ls etc
+      - grv  # git cli as tig
       - htop
       - httpie  # Modern alternative to curl
       - jq  # JSON manipulation tool
@@ -57,7 +60,6 @@
       - visidata  # vd
       - yarn
       - zsh
-      - grv  # git cli as tig
       # - mycli (though pip) mysql client with autocomplete and syntax highlight
 
 - name: Install packages from snap
