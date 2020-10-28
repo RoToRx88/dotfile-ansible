@@ -15,11 +15,11 @@
   become: yes
   apt: update_cache=yes
 
-- name: Install apt packages
+- name: Install main repo packages
   become: yes
   apt:
     pkg:
-      - ack  # grep, but better for programmer
+      # - ack  # grep, but better for programmer
       - anki  # flashcard app
       - aria2  # Nice cli download threader / torrent downloader
       - autojump  # Used in conjunction with zsh to autojump
@@ -28,6 +28,7 @@
       - clipit  # Allow me to copy paste content with shell pipe
       - curl
       - espanso  # System wide snippets
+      - fd-git  # find alternative
       - feh  # Image viewer, used to set desktop background
       - flameshot  # For screenshots
       - fzf  # Fuzzy interface
@@ -60,6 +61,9 @@
       - visidata  # vd
       - yarn
       - zsh
+      # - whale  build a data index https://docs.whale.cx/setup/getting-started-for-teams
+      # - https://github.com/samtay/so  search stackoverflow from the command line
+      # - https://github.com/sampson-chen/sack wrapper for ag the silver searcher
       # - mycli (though pip) mysql client with autocomplete and syntax highlight
 
 - name: Install packages from snap
