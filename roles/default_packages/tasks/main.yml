@@ -43,6 +43,7 @@
       - lastpass-cli  # lpass
       - make
       - mpv  # Video player
+      - ncdu  # Disk file size analyzer
       - nnn  # Lightweight cli file manager
       - pandoc  # Convert doc
       - python3-virtualenv
