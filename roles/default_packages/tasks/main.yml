@@ -28,7 +28,7 @@
       - clipit  # Allow me to copy paste content with shell pipe
       - curl
       - espanso  # System wide snippets
-      - fd-git  # find alternative
+      - fd  # find alternative
       - feh  # Image viewer, used to set desktop background
       - flameshot  # For screenshots
       - fzf  # Fuzzy interface
