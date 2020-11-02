@@ -1,6 +1,7 @@
 # This file contains all the aliases I defined
 
 unalias grv  # https://github.com/rgburke/grv
+alias tree="tree -a"
 alias t="tree -L 1"
 alias tt="tree -L 2"
 alias ttt="tree -L 3"

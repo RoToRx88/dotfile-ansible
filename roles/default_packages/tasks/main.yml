@@ -50,6 +50,7 @@
       - rename # Script that helps rename files
       - rxvt-unicode  # urxvt terminal
       - silver-searcher  # ag
+      - sysstat  # Collection of perf mon tools (iostat, isag, mpstat, pidstat, sadf, sar)
       - texlive-fonts-extra
       - texlive-fonts-recommended
       - texlive-latex-base  # (texlive*) Required for pandoc md to pdf
