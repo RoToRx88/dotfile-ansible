@@ -36,6 +36,7 @@
       - glow  # markdown reader
       - google-chrome-stable
       - grc  # Colorise cli commands like ping ls etc
+      - gron-bin  # Make JSON greppable
       - grv  # git cli as tig
       - htop
       - httpie  # Modern alternative to curl
