@@ -43,6 +43,7 @@
       - jq  # JSON manipulation tool
       - lastpass-cli  # lpass
       - make
+      - mtr  # Traceroute with ping and graph
       - mpv  # Video player
       - ncdu  # Disk file size analyzer
       - nnn  # Lightweight cli file manager

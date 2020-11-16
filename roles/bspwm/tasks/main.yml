@@ -20,7 +20,7 @@
     state: directory
   loop:
     - "{{ ansible_env.HOME }}/.config/bspwm"
-    - "{{ ansible_env.HOME }}/sxhkd"
+    - "{{ ansible_env.HOME }}/.config/sxhkd"
 
 - name: Ensure bspwm configuration is present
   copy:
